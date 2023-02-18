@@ -7,10 +7,8 @@
 /* betty style doc for function main goes there */
 int main(void)
 {
-	int i1, i2, j1, j2, k1, k2;
-
-	k1 = 0;
-
+int i1, i2, j1, j2, k1, k2;
+k1 = 0;
 	while (k1 <= 98)
 	{
 		i1 = (k1 / 10 + '0');
@@ -27,11 +25,11 @@ int main(void)
 				putchar(' ');
 				putchar(j1);
 				putchar(j2);
-			}
-			if (k1 != 98)
-			{
-				putchar(',');
-				putchar(' ');
+				if ((k1 * 100 + k2) != 9899)
+				{
+					putchar(',');
+					putchar(' ');
+				}
 			}
 			k2++;
 		}
