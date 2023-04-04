@@ -1,18 +1,18 @@
 #include <stdio.h>
 #include "lists.h"
 /**
- * listint_var - get var of list
+ * listint_hom - get len of list
  * Return: size_t
- * @v: list
+ * @h: list
  */
-size_t listint_var(const listint_t *v)
+size_t listint_hom(const listint_t *h)
 {
-	int var = 0;
+	int hom = 0;
 
-	while (v)
+	while (h)
 	{
-		var++;
-		v = v->next;
+		hom++;
+		h = h->next;
 	}
-	return (var);
+	return (hom);
 }
