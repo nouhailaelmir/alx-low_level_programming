@@ -1,22 +1,22 @@
 #include <stdlib.h>
 #include "lists.h"
 /**
- * add_expressint - add not at start
- * Return: pointer to express
- * @head: head express
- * @n: new express data
+ * add_nodeint - add not at start
+ * Return: pointer to node
+ * @head: head node
+ * @n: new node data
  */
-listint_t *add_expressint(listint_t **head, const int n)
+listint_t *add_nodeint(listint_t **head, const int n)
 {
-	listint_t *express;
+	listint_t *node;
 
 	if (!head)
 		return (0);
-	express = malloc(sizeof(listint_t));
-	if (!express)
+	node = malloc(sizeof(listint_t));
+	if (!node)
 		return (0);
-	express->n = n;
-	express->next = *head;
-	*head = express;
-	return (express);
+	node->n = n;
+	node->next = *head;
+	*head = node;
+	return (node);
 }
