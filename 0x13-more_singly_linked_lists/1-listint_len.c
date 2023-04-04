@@ -1,18 +1,18 @@
 #include <stdio.h>
 #include "lists.h"
 /**
- * listint_hom - get len of list
+ * listint_len - get len of list
  * Return: size_t
  * @h: list
  */
-size_t listint_hom(const listint_t *h)
+size_t listint_len(const listint_t *h)
 {
-	int hom = 0;
+	int len = 0;
 
 	while (h)
 	{
-		hom++;
+		len++;
 		h = h->next;
 	}
-	return (hom);
+	return (len);
 }
