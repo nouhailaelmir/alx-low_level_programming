@@ -1,0 +1,27 @@
+#include "main.h"
+#include <stdlib.h>
+
+/**
+ * read_textfile- prints text from a file.
+ * @filename: name of the file
+ * @letters: number of characters to read
+ * Return: actual number of letters read, 0 if end of file
+ */
+ssize_t read_textfile(const char *filename, size_t letters)
+{
+	char *buf;
+	ssize_t rm;
+	ssize_t w;
+	ssize_t t;
+
+	fd = open(filename, O_RDONLY);
+	if (rm == -1)
+		return (0);
+	buf = malloc(sizeof(char) * letters);
+	t = read(rm, buf, letters);
+	w = write(STDOUT_FILENO, buf, t);
+
+	free(buf);
+	close(rm);
+	return (w);
+}
